@@ -33,7 +33,7 @@ $ pip install profanity-check
 ```python
 from profanity_check import predict, predict_prob
 
-predict(['predict() takes an array and returns a 1 for each string if it's offensive, else 0.'])
+predict(['predict() takes an array and returns a 1 for each string if it is offensive, else 0.'])
 # [0]
 
 predict(['fuck you'])
