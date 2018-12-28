@@ -18,6 +18,7 @@ Other libraries like [profanity-filter](https://github.com/rominf/profanity-filt
 | --------|-------------------|---------------------|-----------------------
 | profanity-check | 0.2 | 0.5 | 3.5
 | profanity-filter | 60 | 1200 | 13000
+| profanity | 0.3 | 1.2 | 24
 
 `profanity-check` is anywhere from **300 - 4000 times faster** than `profanity-filter` in this benchmark!
 
