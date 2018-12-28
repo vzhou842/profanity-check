@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="profanity-check",
-  version="1.0.0",
+  version="1.0.1",
   author="Victor Zhou",
   author_email="vzhou842@gmail.com",
   description="A fast, robust library to check for offensive language in strings.",
