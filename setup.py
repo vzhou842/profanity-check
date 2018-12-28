@@ -8,11 +8,12 @@ setuptools.setup(
   version="0.1.0",
   author="Victor Zhou",
   author_email="vzhou842@gmail.com",
-  description="A fast, robust library to check for profanity or offensive language in strings.",
+  description="A fast, robust library to check for offensive language in strings.",
   long_description=long_description,
   long_description_content_type="text/markdown",
   url="https://github.com/vzhou842/profanity-check",
   packages=setuptools.find_packages(),
+  package_data={ 'profanity_check': ['data/model.joblib', 'data/vectorizer.joblib'] },
   classifiers=[
     "Development Status :: 4 - Beta",
     "Natural Language :: English",
