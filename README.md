@@ -66,7 +66,7 @@ Special thanks to the authors of the datasets used in this project. `profanity-c
 
 ### Why
 
-One simplified way you could think about why `profanity-check` works is this: during the training process, the model learns which words are "bad" and how "bad" they are because those words will appear more often in samples labeled as offensive. Thus, in a way the training process is just dynamically picking out its own smarter blacklist of bad words based on data (instead of relying on arbitrary wordlists written by humans). 
+One simplified way you could think about why `profanity-check` works is this: during the training process, the model learns which words are "bad" and how "bad" they are because those words will appear more often in offensive texts. Thus, it's as if the training process is picking out the "bad" words out of all possible words and using those to make future predictions. This is better than just relying on arbitrary word blacklists chosen by humans!
 
 ## Caveats
 
