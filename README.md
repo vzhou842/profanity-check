@@ -1,6 +1,7 @@
 # profanity-check
 
 [![Build Status](https://travis-ci.com/vzhou842/profanity-check.svg?branch=master)](https://travis-ci.com/vzhou842/profanity-check)
+[![release](https://img.shields.io/badge/dynamic/json.svg?label=release&url=https%3A%2F%2Fpypi.org%2Fpypi%2Fprofanity-check%2Fjson&query=%24.info.version&colorB=blue)](https://pypi.org/project/profanity-check/)
 
 A fast, robust Python library to check for profanity or offensive language in strings.
 
