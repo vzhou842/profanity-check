@@ -29,6 +29,18 @@ Other libraries like [profanity-filter](https://github.com/rominf/profanity-filt
 
 `profanity-check` is anywhere from **300 - 4000 times faster** than `profanity-filter` in this benchmark!
 
+### Accuracy
+
+This table speaks for itself:
+
+| Package | Test Accuracy | Balanced Test Accuracy | Precision | Recall | F1 Score
+| ------- | ------------- | ---------------------- | --------- | ------ | --------
+| profanity-check | 95.0% | 93.0% | 86.1% | 89.6% | 0.88
+| profanity-filter | 91.8% | 83.6% | 85.4% | 70.2% | 0.77
+| profanity | 85.6% | 65.1% | 91.7% | 30.8% | 0.46
+
+See the How section below for more details on the dataset used for these results.
+
 ## Installation
 
 ```
