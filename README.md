@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/vzhou842/profanity-check.svg?branch=master)](https://travis-ci.com/vzhou842/profanity-check)
 [![release](https://img.shields.io/badge/dynamic/json.svg?label=release&url=https%3A%2F%2Fpypi.org%2Fpypi%2Fprofanity-check%2Fjson&query=%24.info.version&colorB=blue)](https://pypi.org/project/profanity-check/)
 
-A fast, robust Python library to check for profanity or offensive language in strings.
+A fast, robust Python library to check for profanity or offensive language in strings. Read more about how and why `profanity-check` was built in [this Medium post](https://medium.com/@victorczhou/building-a-better-profanity-detection-library-with-scikit-learn-3638b2f2c4c2).
 
 ## How It Works
 
@@ -76,8 +76,6 @@ Special thanks to the authors of the datasets used in this project. `profanity-c
 - the [Toxic Comment Classification Challenge](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) on Kaggle.
 
 `profanity-check` relies heavily on the excellent [`scikit-learn`](https://scikit-learn.org/) library. It's mostly powered by `scikit-learn` classes [`CountVectorizer`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html), [`LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html), and [`CalibratedClassifierCV`](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html). It uses a [Bag-of-words model](https://en.wikipedia.org/wiki/Bag-of-words_model) to vectorize input strings before feeding them to a linear classifier.
-
-Read more about how `profanity-check` was built in [this Medium post](https://medium.com/@victorczhou/building-a-better-profanity-detection-library-with-scikit-learn-3638b2f2c4c2).
 
 ### Why
 
