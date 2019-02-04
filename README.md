@@ -77,6 +77,8 @@ Special thanks to the authors of the datasets used in this project. `profanity-c
 
 `profanity-check` relies heavily on the excellent [`scikit-learn`](https://scikit-learn.org/) library. It's mostly powered by `scikit-learn` classes [`CountVectorizer`](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html), [`LinearSVC`](https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html), and [`CalibratedClassifierCV`](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html). It uses a [Bag-of-words model](https://en.wikipedia.org/wiki/Bag-of-words_model) to vectorize input strings before feeding them to a linear classifier.
 
+Read more about how `profanity-check` was built in [this Medium post](https://medium.com/@victorczhou/building-a-better-profanity-detection-library-with-scikit-learn-3638b2f2c4c2).
+
 ### Why
 
 One simplified way you could think about why `profanity-check` works is this: during the training process, the model learns which words are "bad" and how "bad" they are because those words will appear more often in offensive texts. Thus, it's as if the training process is picking out the "bad" words out of all possible words and using those to make future predictions. This is better than just relying on arbitrary word blacklists chosen by humans!
