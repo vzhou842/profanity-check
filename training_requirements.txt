@@ -1,0 +1,6 @@
+#
+# Requirements for training models script
+#
+-r requirements.txt
+
+pandas==1.0.3
