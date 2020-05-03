@@ -84,3 +84,10 @@ One simplified way you could think about why `profanity-check` works is this: du
 ## Caveats
 
 This library is far from perfect. For example, it has a hard time picking up on less common variants of swear words like *"f4ck you"* or *"you b1tch"* because they don't appear often enough in the training corpus. **Never treat any prediction from this library as unquestionable truth, because it does and will make mistakes.** Instead, use this library as a heuristic.
+
+## Training the model
+
+```shell
+python -m pip install -r training_requirelments.txt
+python profanity_check/train_models.py
+```
