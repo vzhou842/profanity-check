@@ -1,6 +1,6 @@
 import pkg_resources
 import numpy as np
-import joblib
+from sklearn.externals import joblib
 
 vectorizer = joblib.load(pkg_resources.resource_filename('profanity_check', 'data/vectorizer.joblib'))
 model = joblib.load(pkg_resources.resource_filename('profanity_check', 'data/model.joblib'))
