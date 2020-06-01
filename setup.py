@@ -1,25 +1,58 @@
+"""
+Setup file for the package hanzo-profanity-check.
+This is forked from https://github.com/vzhou842/profanity-check .
+"""
+
 import setuptools
 
-with open("README.md", "r") as fh:
-  long_description = fh.read()
+
+with open("README.md", "r") as file_handle:
+    long_description = file_handle.read()
 
 setuptools.setup(
-  name="profanity-check",
-  version="1.0.3",
-  author="Victor Zhou",
-  author_email="vzhou842@gmail.com",
-  description="A fast, robust library to check for offensive language in strings.",
-  long_description=long_description,
-  long_description_content_type="text/markdown",
-  url="https://github.com/vzhou842/profanity-check",
-  packages=setuptools.find_packages(),
-  install_requires=['joblib>=0.14.1', 'scikit-learn>=0.20.2'],
-  package_data={ 'profanity_check': ['data/model.joblib', 'data/vectorizer.joblib'] },
-  classifiers=[
-    "Development Status :: 5 - Production/Stable",
-    "Natural Language :: English",
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-  ],
+    name="hanzo-profanity-check",
+    version="1.0",
+    # use_scm_version=True,
+
+    author="Hanzo Archives",
+    author_email="hanzo-dev@hanzoarchives.com",
+
+    description="Forked copy of profanity-check",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/hanzoarchives/profanity-check",
+
+    packages=setuptools.find_packages(),
+
+    classifiers=[
+        "Programming Language :: Python :: 3.7",
+        "Operating System :: Linux",
+    ],
+
+    install_requires=[
+        'joblib>=0.14.1',
+        'scikit-learn>=0.20.2'
+    ],
+
+    package_data={
+        'profanity_check': [
+            'data/model.joblib',
+            'data/vectorizer.joblib'
+        ]
+    },
+
+    tests_require=[
+        'flake8',
+        'pytest',
+        'pylint',
+        'mock'
+    ],
+
+    setup_requires=[
+        'pytest-runner',
+        'pytest-pylint',
+        'flake8',
+        'setuptools_scm',
+        'wheel'
+    ]
 )

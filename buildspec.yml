@@ -1,0 +1,36 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+        python: 3.7
+
+  build:
+    commands:
+      # Download the installer pip credentials.
+      - aws s3 cp s3://hanzo.infra/ci/prod/pypi/packages/installer/pip.conf /etc/pip.conf
+
+      # Update pip and install twine.
+      - pip install --upgrade pip
+      - pip install twine
+
+      # Install dependencies for this package.
+      - pip install joblib
+      - pip install scikit-learn
+
+      # Run tests and code standard checks.
+      - python setup.py pytest
+      - python setup.py flake8
+      - python setup.py bdist_wheel
+
+  post_build:
+    commands:
+      # Check for build success before uploading package.
+      - if [ ${CODEBUILD_BUILD_SUCCEEDING} -eq 0 ]; then exit 1; fi
+
+      # Download the CI pip credentials for uploading to twine.
+      - aws s3 cp s3://hanzo.infra/ci/prod/pypi/packages/hanzo-ci/.pypirc ~/.pypirc
+
+      # Build the wheel and upload using twine.
+      - python setup.py bdist_wheel
+      - twine upload dist/* -r hanzopypi --skip-existing
