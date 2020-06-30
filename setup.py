@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="profanity-check",
-  version="1.0.3",
+  version="1.0.5",
   author="Victor Zhou",
   author_email="vzhou842@gmail.com",
   description="A fast, robust library to check for offensive language in strings.",
@@ -13,7 +13,7 @@ setuptools.setup(
   long_description_content_type="text/markdown",
   url="https://github.com/vzhou842/profanity-check",
   packages=setuptools.find_packages(),
-  install_requires=['joblib>=0.14.1', 'scikit-learn>=0.20.2'],
+  install_requires=['scikit-learn>=0.23.1', 'joblib>=0.15.1'],
   package_data={ 'profanity_check': ['data/model.joblib', 'data/vectorizer.joblib'] },
   classifiers=[
     "Development Status :: 5 - Production/Stable",
