@@ -1,9 +1,8 @@
 import pandas as pd
-import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import LinearSVC
 from sklearn.calibration import CalibratedClassifierCV
-from joblib import dump, load
+from joblib import dump
 
 data = pd.read_csv("clean_data.csv")
 texts = data["text"].astype(str)
