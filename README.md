@@ -6,8 +6,6 @@ maintained <https://github.com/vzhou842/profanity-check>:
 > A fast, robust Python library to check for profanity or offensive language in strings.
 > Read more about how and why `profanity-check` was built in 
 > [this blog post](https://victorzhou.com/blog/better-profanity-detection-with-scikit-learn/).
-> You can also test out `profanity-check` 
-> [in your browser](https://repl.it/@vzhou842/profanity-check-playground).
 
 Our aim is to follow scikit-learn's (main dependency) versions and post models trained with the
 same version number, example alt-profanity-check version 1.2.3.4 should be trained with the
@@ -21,7 +19,9 @@ datasets.
 
 ## How It Works
 
-`profanity-check` uses a linear SVM model trained on 200k human-labeled samples of clean and profane text strings. Its model is simple but surprisingly effective, meaning **`profanity-check` is both robust and extremely performant**.
+`profanity-check` uses a linear SVM model trained on 200k human-labeled samples of clean and
+profane text strings. Its model is simple but surprisingly effective, meaning
+**`profanity-check` is both robust and extremely performant**.
 
 ## Why Use profanity-check?
 
