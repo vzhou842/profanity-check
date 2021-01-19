@@ -134,3 +134,30 @@ variants of swear words like *"f4ck you"* or *"you b1tch"* because they don't ap
 enough in the training corpus. **Never treat any prediction from this library as 
 unquestionable truth, because it does and will make mistakes.** Instead, use this library as a
 heuristic.
+
+## Developer Notes
+
+### Uploading to PyPi
+
+Setup:
+
+- Set up your "~/.pypirc" with the appropriate token
+- `pip install -r requirements_for_uploading.txt` which installs twine
+
+New Version:
+
+With `x.y.z` as the version to be uploaded:
+
+First tag:
+
+```shell
+git tag -a vx.y.x -m "Version x.y.z"
+git push --tags
+```
+
+Then upload:
+
+```shell
+python setup.py sdist
+twine upload dist/alt-profanity-check-x.y.z.tar.gz
+```
