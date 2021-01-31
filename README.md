@@ -17,6 +17,8 @@ when we trained the models.
 Last but not least we aim to clean up the codebase a bit and **maybe** introduce some features or
 datasets.
 
+Logo from <https://www.istockphoto.com/vector/comic-text-phrase-pop-art-wtf-gm846106188-138614723>
+
 ## How It Works
 
 `profanity-check` uses a linear SVM model trained on 200k human-labeled samples of clean and
