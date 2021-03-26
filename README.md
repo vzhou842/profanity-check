@@ -19,6 +19,12 @@ datasets.
 
 Logo from <https://www.istockphoto.com/vector/comic-text-phrase-pop-art-wtf-gm846106188-138614723>
 
+## Profanity-check API
+
+We have created an API for the library wrapping this package on RapidAPI which you can find here: <https://rapidapi.com/mistriotis-mistriotis-default/api/profanity-check1>.
+
+Feedback, questions, and subscriptions are highly appreciated. Feel free to reach out to each one of us with any questions or feedback about the API.
+
 ## How It Works
 
 `profanity-check` uses a linear SVM model trained on 200k human-labeled samples of clean and
