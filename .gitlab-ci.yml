@@ -36,3 +36,13 @@ test:pytest:python3-9:
   script:
     - pip install pytest --quiet
     - python -m pytest
+
+#
+# Seems Python3.10 not yet supported:
+# https://gitlab.com/meltano/meltano/-/issues/2889
+#
+#test:pytest:python3-10:
+#  image: python:3.10
+#  script:
+#    - pip install pytest --quiet
+#    - python -m pytest
