@@ -13,12 +13,6 @@ before_script:
   - source venv/bin/activate
   - pip install -r requirements.txt
 
-test:pytest:python3-6:
-  image: python:3.6
-  script:
-    - pip install pytest --quiet
-    - python -m pytest
-
 test:pytest:python3-7:
   image: python:3.7
   script:
