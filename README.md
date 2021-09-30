@@ -78,6 +78,11 @@ See the How section below for more details on the dataset used for these results
 $ pip install alt-profanity-check
 ```
 
+### For older Python versions
+
+Following Scikit-learn, **Python3.6** is not supported after its 1.0 version if you are using 3.6 pin
+alt-profanity-check to **0.24.2**.
+
 ## Usage
 
 ```python
