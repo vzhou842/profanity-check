@@ -21,15 +21,18 @@ before_script:
 test:pytest:python3-7:
   image: python:3.7
   <<: *common_test_template_script
+
 test:pytest:python3-8:
   image: python:3.8
   <<: *common_test_template_script
+
 test:pytest:python3-9:
   image: python:3.9
   <<: *common_test_template_script
+
 #
 # Seems Python3.10 not yet supported:
 #
-#test:pytest:python3-10:
-#  image: python:3.10
-#  <<: *common_test_template_script
+test:pytest:python3-10:
+  image: python:3.10
+  <<: *common_test_template_script
