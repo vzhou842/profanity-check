@@ -13,29 +13,23 @@ before_script:
   - source venv/bin/activate
   - pip install -r requirements.txt
 
+.common_test_template_script: &common_test_template_script
+  script:
+    - pip install pytest --quiet
+    - python -m pytest
+
 test:pytest:python3-7:
   image: python:3.7
-  script:
-    - pip install pytest --quiet
-    - python -m pytest
-
+  <<: *common_test_template_script
 test:pytest:python3-8:
   image: python:3.8
-  script:
-    - pip install pytest --quiet
-    - python -m pytest
-
+  <<: *common_test_template_script
 test:pytest:python3-9:
   image: python:3.9
-  script:
-    - pip install pytest --quiet
-    - python -m pytest
-
+  <<: *common_test_template_script
 #
 # Seems Python3.10 not yet supported:
 #
 #test:pytest:python3-10:
 #  image: python:3.10
-#  script:
-#    - pip install pytest --quiet
-#    - python -m pytest
+#  <<: *common_test_template_script
