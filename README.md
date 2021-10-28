@@ -162,7 +162,7 @@ With `x.y.z` as the version to be uploaded:
 First tag:
 
 ```shell
-git tag -a vx.y.x -m "Version x.y.z"
+git tag -a vx.y.z -m "Version x.y.z"
 git push --tags
 ```
 
