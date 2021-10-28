@@ -19,6 +19,10 @@ datasets.
 
 Logo from <https://www.istockphoto.com/vector/comic-text-phrase-pop-art-wtf-gm846106188-138614723>
 
+## Changelog
+
+See [CHANGELOG.md](https://gitlab.com/dimitrios/alt-profanity-check/-/blob/master/CHANGELOG.md)
+
 ## How It Works
 
 `profanity-check` uses a linear SVM model trained on 200k human-labeled samples of clean and
@@ -158,7 +162,7 @@ With `x.y.z` as the version to be uploaded:
 First tag:
 
 ```shell
-git tag -a vx.y.x -m "Version x.y.z"
+git tag -a vx.y.z -m "Version x.y.z"
 git push --tags
 ```
 
