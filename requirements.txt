@@ -1,5 +1,5 @@
-joblib==1.0.1
-numpy==1.21.2
-# Used for the training script
-pandas==1.3.3
-scikit-learn==1.0
+joblib==1.1.0
+numpy==1.21.3
+# Used for the training script:
+pandas==1.3.4
+scikit-learn==1.0.1
