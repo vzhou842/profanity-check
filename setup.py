@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="alt-profanity-check",
-    version="1.0.2",
+    version="1.0.2.1",
     author="Victor Zhou (original author), Menelaos Kotoglou, Dimitrios Mistriotis",
     author_email="dimitrios@mistriotis.com",
     description=(
