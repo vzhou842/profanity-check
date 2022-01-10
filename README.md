@@ -43,8 +43,8 @@ There are obviously glaring issues with this approach, and, while they might be 
 **these libraries are not accurate at all**.
 
 A simple example for which `profanity-check` is better is the phrase 
-*"You cocksucker"* - `profanity` thinks this is clean because it doesn't have 
-*"cocksucker"* in its wordlist.
+* "You cocksucker"* - `profanity` thinks this is clean because it doesn't have 
+* "cocksucker"* in its wordlist.
 
 ### Performance
 
@@ -55,11 +55,11 @@ A benchmark (performed December 2018 on a new 2018 Macbook Pro) using
 https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) yielded roughly 
 the following results:
 
-| Package | 1 Prediction (ms) | 10 Predictions (ms) | 100 Predictions (ms)
-| --------|-------------------|---------------------|-----------------------
-| profanity-check | 0.2 | 0.5 | 3.5
-| profanity-filter | 60 | 1200 | 13000
-| profanity | 0.3 | 1.2 | 24
+| Package          | 1 Prediction (ms) | 10 Predictions (ms) | 100 Predictions (ms) |
+|------------------|-------------------|---------------------|----------------------|
+| profanity-check  | 0.2               | 0.5                 | 3.5                  |
+| profanity-filter | 60                | 1200                | 13000                |
+| profanity        | 0.3               | 1.2                 | 24                   |
 
 `profanity-check` is anywhere from **300 - 4000 times faster** than `profanity-filter` in this
 benchmark!
@@ -68,11 +68,11 @@ benchmark!
 
 This table speaks for itself:
 
-| Package | Test Accuracy | Balanced Test Accuracy | Precision | Recall | F1 Score
-| ------- | ------------- | ---------------------- | --------- | ------ | --------
-| profanity-check | 95.0% | 93.0% | 86.1% | 89.6% | 0.88
-| profanity-filter | 91.8% | 83.6% | 85.4% | 70.2% | 0.77
-| profanity | 85.6% | 65.1% | 91.7% | 30.8% | 0.46
+| Package          | Test Accuracy | Balanced Test Accuracy | Precision | Recall | F1 Score |
+|------------------|---------------|------------------------|-----------|--------|----------|
+| profanity-check  | 95.0%         | 93.0%                  | 86.1%     | 89.6%  | 0.88     |
+| profanity-filter | 91.8%         | 83.6%                  | 85.4%     | 70.2%  | 0.77     |
+| profanity        | 85.6%         | 65.1%                  | 91.7%     | 30.8%  | 0.46     |
 
 See the How section below for more details on the dataset used for these results.
 
