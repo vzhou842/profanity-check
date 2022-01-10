@@ -26,10 +26,13 @@ def test_accuracy():
 def test_edge_cases():
     """Edge cases: empty and long strings"""
     texts = [
-        '',
-        '                    ',
-        ('this is but a test string, '
-         'there is no offensive language to be found here! :) ') * 25,
-        'aaaaaaa' * 100,
-        ]
+        "",
+        "                    ",
+        (
+            "this is but a test string, "
+            "there is no offensive language to be found here! :) "
+        )
+        * 25,
+        "aaaaaaa" * 100,
+    ]
     assert list(predict(texts)) == [0, 0, 0, 0]
