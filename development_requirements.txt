@@ -1,0 +1,7 @@
+#
+# Requirements for development
+#
+-r requirements.txt
+
+pytest==7.1.2
+pylint==2.13.9

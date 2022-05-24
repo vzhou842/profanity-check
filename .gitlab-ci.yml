@@ -18,10 +18,6 @@ before_script:
     - pip install pytest --quiet
     - python -m pytest
 
-test:pytest:python3-7:
-  image: python:3.7
-  <<: *common_test_template_script
-
 test:pytest:python3-8:
   image: python:3.8
   <<: *common_test_template_script
@@ -33,3 +29,7 @@ test:pytest:python3-9:
 test:pytest:python3-10:
   image: python:3.10
   <<: *common_test_template_script
+
+#test:pytest:python3-11-release-candidate:
+#  image: python:3.11-rc
+#  <<: *common_test_template_script

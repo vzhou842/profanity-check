@@ -148,6 +148,8 @@ heuristic.
 
 ## Developer Notes
 
+- `pip install -r development_requirements.txt`
+
 ### Uploading to PyPi
 
 Setup:
