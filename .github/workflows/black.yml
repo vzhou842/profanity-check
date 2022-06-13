@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python_version: [3.8, 3.9, 3.10]
+        # For quotes on 3.10: https://github.com/actions/setup-python/issues/160
+        python_version: [3.8, 3.9, '3.10']
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
