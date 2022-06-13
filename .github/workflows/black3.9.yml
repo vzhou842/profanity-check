@@ -1,15 +1,17 @@
-name: black3.9
+name: black
 on: pull_request
 jobs:
   black:
-    runs-on: ubuntu-latest
+    strategy:
+    matrix:
+      runs-on: ubuntu-latest
+      python-version: [3.8, 3.9, 3.10]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
         with:
-          python-version: 3.9
+          python-version: [3.8, 3.9, 3.10]
       - run: |
           python -m pip install --upgrade pip
           pip install -r development_requirements.txt
-      - run: |
-          black --check --verbose .
+      - run: black --check --verbose .
