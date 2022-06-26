@@ -1,4 +1,4 @@
-name: black
+name: Pytest
 on: pull_request
 jobs:
   black:
