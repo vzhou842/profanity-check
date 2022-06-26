@@ -1,7 +1,7 @@
 name: Pytest
 on: pull_request
 jobs:
-  black:
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
