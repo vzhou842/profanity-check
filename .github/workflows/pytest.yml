@@ -1,31 +1,18 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
-name: Pytest
-
-on:
-  pull_request:
-    branches: [ "master" ]
-
+name: black
+on: pull_request
 jobs:
-  build:
-
+  black:
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
-
+        # For quotes on 3.10: https://github.com/actions/setup-python/issues/160
+        python_version: [3.8, 3.9, '3.10']
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install pytest alt-profanity-check
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with pytest
-      run: pytest
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python_version }}
+      - run: |
+          python -m pip install --upgrade pip
+          pip install -r development_requirements.txt
+      - run: pytest
