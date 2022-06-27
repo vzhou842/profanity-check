@@ -1,7 +1,7 @@
-name: Black
+name: Pytest
 on: pull_request
 jobs:
-  black:
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -15,4 +15,7 @@ jobs:
       - run: |
           python -m pip install --upgrade pip
           pip install -r development_requirements.txt
-      - run: black --check --verbose .
+      #
+      # Reference: https://thiagolopessilva.medium.com/running-unit-testing-on-github-action-using-pytest-61653d993c9c
+      #
+      - run: python -m pytest --import-mode=append tests/
