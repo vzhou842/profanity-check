@@ -15,4 +15,7 @@ jobs:
       - run: |
           python -m pip install --upgrade pip
           pip install -r development_requirements.txt
+      #
+      # Reference: https://thiagolopessilva.medium.com/running-unit-testing-on-github-action-using-pytest-61653d993c9c
+      #
       - run: python -m pytest --import-mode=append tests/
