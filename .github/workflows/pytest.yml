@@ -1,5 +1,5 @@
 name: Pytest
-on: pull_request
+on: [push, pull_request]
 jobs:
   pytest:
     runs-on: ubuntu-latest
