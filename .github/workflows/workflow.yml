@@ -1,4 +1,4 @@
-name: "Black"
+name: "Test and Code Format Check"
 on: pull_request
 jobs:
   black:
@@ -16,3 +16,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r development_requirements.txt
       - run: black --check --verbose .
+  pytest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # For quotes on 3.10: https://github.com/actions/setup-python/issues/160
+        python_version: [3.8, 3.9, '3.10']
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: ${{ matrix.python_version }}
+      - run: |
+          python -m pip install --upgrade pip
+          pip install -r development_requirements.txt
+      #
+      # Reference: https://thiagolopessilva.medium.com/running-unit-testing-on-github-action-using-pytest-61653d993c9c
+      #
+      - run: python -m pytest --import-mode=append tests/
