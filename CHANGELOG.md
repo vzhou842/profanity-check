@@ -1,11 +1,17 @@
 # Changelog
 
+## Version 1.1.2
+
+* scikit-learn to 1.1.2
+* Added instructions in README on how to generate models
+* Changed "url" in `setup.py` to Github.
+
 ## Version 1.0.2.1
 
 Fixes for broken release
 
 * Fix: Numpy regression for Python3.7
-* Fux: typo in scikit-learn version in setup
+* Fix: typo in scikit-learn version in setup
 * Prayers: that there will not be a 1.0.2.1 scikit version
 
 ## Version 1.0.2
