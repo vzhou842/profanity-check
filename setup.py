@@ -15,7 +15,7 @@ setuptools.setup(
     ),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://gitlab.com/dimitrios/alt-profanity-check/",
+    url="https://github.com/dimitrismistriotis/alt-profanity-check",
     packages=setuptools.find_packages(),
     install_requires=["scikit-learn==1.1.2", "joblib>=1.1.0"],
     python_requires=">=3.8",
