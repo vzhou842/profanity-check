@@ -9,11 +9,6 @@ on:
   push:
     tags:
       - 'v*'
-on:
-  workflow_run:
-    workflows: [Black, Pytest]
-    types:
-      - completed
 jobs:
   pypi_upload:
     runs-on: ubuntu-latest
