@@ -148,7 +148,17 @@ heuristic.
 
 ## Developer Notes
 
+- Create a virtual environment from the project
 - `pip install -r development_requirements.txt`
+
+### Retraining data
+
+With the above in place:
+
+```shell
+cd profanity_check/data
+python train_model.py
+```
 
 ### Uploading to PyPi
 
