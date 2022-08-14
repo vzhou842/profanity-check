@@ -1,8 +1,14 @@
 #
 # Under Construction
+# References:
+#
+# https://futurestud.io/tutorials/github-actions-run-a-workflow-when-creating-a-tag
 #
 name: "Release (dry-run)"
-# on: [push, pull_request]
+on:  
+  push:
+    tags:
+      - 'v*'
 on:
   workflow_run:
     workflows: [Black, Pytest]
