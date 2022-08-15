@@ -32,4 +32,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements_for_uploading.txt
       - run: python setup.py sdist
-      - run: twine check "dist/alt-profanity-check-${VERSION}.tar.gz"
+      - run: twine check "dist/alt-profanity-check-${{ steps.get_version.outputs.VERSION }}.tar.gz"
