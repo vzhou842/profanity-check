@@ -89,6 +89,12 @@ alt-profanity-check to **0.24.2**.
 
 ## Usage
 
+You can test from the command line:
+
+```shell
+profanity_check "Check something" "Check something else"
+```
+
 ```python
 from profanity_check import predict, predict_prob
 
