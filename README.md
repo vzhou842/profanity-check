@@ -162,6 +162,9 @@ python train_model.py
 
 ### Uploading to PyPi
 
+Currently trying to automate it using Github Actions; see:
+`.github/workflows/package_release_dry_run.yml`.
+
 Setup:
 
 - Set up your "~/.pypirc" with the appropriate token
