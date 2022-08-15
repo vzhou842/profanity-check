@@ -12,12 +12,15 @@ on:
 jobs:
   pypi_upload:
     runs-on: ubuntu-latest
+    env:
+      TWINE_USERNAME: __token__
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
         with:
           python-version: "3.10"  # Latest no need to change as one copy will be delivered
       - run: |
+          echo "Uploading as ${TWINE_USERNAME}"
           python -m pip install --upgrade pip
           pip install -r requirements_for_uploading.txt
       - run: python setup.py sdist
