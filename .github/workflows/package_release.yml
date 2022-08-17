@@ -4,7 +4,7 @@
 #
 # https://futurestud.io/tutorials/github-actions-run-a-workflow-when-creating-a-tag
 #
-name: "Release (dry-run)"
+name: "Release"
 on:  
   push:
     tags:
@@ -34,4 +34,4 @@ jobs:
       - run: python setup.py sdist
       # Note: if version from tag and one from within setup.py do not match,
       #       next step will fail. Let it as is for an additional check.
-      - run: twine check "dist/alt-profanity-check-${{ steps.get_version.outputs.VERSION }}.tar.gz"
+      - run: twine upload "dist/alt-profanity-check-${{ steps.get_version.outputs.VERSION }}.tar.gz"
