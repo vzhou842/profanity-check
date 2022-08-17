@@ -4,7 +4,7 @@
 #
 # https://futurestud.io/tutorials/github-actions-run-a-workflow-when-creating-a-tag
 #
-name: "Release (dry-run)"
+name: "Release"
 on:  
   push:
     tags:
