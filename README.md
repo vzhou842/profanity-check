@@ -89,6 +89,12 @@ alt-profanity-check to **0.24.2**.
 
 ## Usage
 
+You can test from the command line:
+
+```shell
+profanity_check "Check something" "Check something else"
+```
+
 ```python
 from profanity_check import predict, predict_prob
 
@@ -148,9 +154,22 @@ heuristic.
 
 ## Developer Notes
 
+- Create a virtual environment from the project
 - `pip install -r development_requirements.txt`
 
+### Retraining data
+
+With the above in place:
+
+```shell
+cd profanity_check/data
+python train_model.py
+```
+
 ### Uploading to PyPi
+
+Currently trying to automate it using Github Actions; see:
+`.github/workflows/package_release_dry_run.yml`.
 
 Setup:
 
