@@ -1,8 +1,8 @@
 """Setup"""
+from pathlib import Path
 import setuptools
 
-with open("README.md", "r", encoding="utf8") as fh:
-    long_description = fh.read()
+long_description = Path("README.md").read_text(encoding="utf8")
 
 setuptools.setup(
     name="alt-profanity-check",
@@ -10,8 +10,8 @@ setuptools.setup(
     author="Victor Zhou (original author), Menelaos Kotoglou, Dimitrios Mistriotis",
     author_email="dimitrios@mistriotis.com",
     description=(
-        'Dropdown replacement of "profanity-check", '
-        "A fast, robust library to check for offensive language in strings."
+        "A fast, robust library to check for offensive language in strings. "
+        'Dropdown replacement of "profanity-check".'
     ),
     long_description=long_description,
     long_description_content_type="text/markdown",
