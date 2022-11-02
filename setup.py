@@ -1,8 +1,8 @@
 """Setup"""
+from pathlib import Path
 import setuptools
 
-with open("README.md", "r", encoding="utf8") as fh:
-    long_description = fh.read()
+long_description = Path("README.md").read_text(encoding="utf8")
 
 setuptools.setup(
     name="alt-profanity-check",
