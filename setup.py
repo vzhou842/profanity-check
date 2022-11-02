@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf8") as fh:
 
 setuptools.setup(
     name="alt-profanity-check",
-    version="1.1.2",
+    version="1.1.3",
     author="Victor Zhou (original author), Menelaos Kotoglou, Dimitrios Mistriotis",
     author_email="dimitrios@mistriotis.com",
     description=(
@@ -17,7 +17,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/dimitrismistriotis/alt-profanity-check",
     packages=setuptools.find_packages(),
-    install_requires=["scikit-learn==1.1.2", "joblib>=1.1.0"],
+    install_requires=["scikit-learn==1.1.3", "joblib>=1.2.0"],
     python_requires=">=3.8",
     package_data={"profanity_check": ["data/model.joblib", "data/vectorizer.joblib"]},
     classifiers=[
