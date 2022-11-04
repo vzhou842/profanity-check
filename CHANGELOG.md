@@ -1,11 +1,15 @@
 # Changelog
 
+## Version 1.1.3
+
+* scikit-learn to 1.1.3
+
 ## Version 1.1.2
 
 * scikit-learn to 1.1.2
 * Added instructions in README on how to generate models
-* Changed "url" in `setup.py` to Github.
-* Added experimental command line entry point.
+* Changed "url" in `setup.py` to Github
+* Added experimental command line entry point
 
 ## Version 1.0.2.1
 
