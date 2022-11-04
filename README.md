@@ -17,11 +17,10 @@ when we trained the models.
 Last but not least we aim to clean up the codebase a bit and **maybe** introduce some features or
 datasets.
 
-Logo from <https://www.istockphoto.com/vector/comic-text-phrase-pop-art-wtf-gm846106188-138614723>
-
 ## Changelog
 
-See [CHANGELOG.md](https://gitlab.com/dimitrios/alt-profanity-check/-/blob/master/CHANGELOG.md)
+See
+[CHANGELOG.md](https://github.com/dimitrismistriotis/alt-profanity-check/blob/master/CHANGELOG.md)
 
 ## How It Works
 
@@ -83,6 +82,18 @@ $ pip install alt-profanity-check
 ```
 
 ### For older Python versions
+
+#### Python 3.7
+
+From Scikit-learn's [Github page](https://github.com/scikit-learn/scikit-learn):
+
+> scikit-learn 1.0 and later require Python 3.7 or newer.
+> scikit-learn 1.1 and later require Python 3.8 or newer.
+
+Which means that from 1.1.2 and later, Python 3.7 is not supported, hence:
+If you are using 3.6 pin  alt-profanity-check to **1.0.2.1**.
+
+#### Python 3.6
 
 Following Scikit-learn, **Python3.6** is not supported after its 1.0 version if you are using 3.6 pin
 alt-profanity-check to **0.24.2**.
