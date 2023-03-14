@@ -5,6 +5,12 @@
 * Changed description to reflect current state of the project
 * Work towards auto-release using Github Actions
 
+## Version 1.2.2
+
+* scikit-learn to 1.2.2
+* numpy to 1.24.2
+* scipy to 1.10.1
+
 ## Version 1.1.3
 
 * scikit-learn to 1.1.3
