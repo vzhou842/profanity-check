@@ -218,3 +218,8 @@ venv.bak/
 
 # .idea
 .idea/
+
+#
+# Ignore clean_data.csv from data now that we store it in compressed form
+#
+profanity_check/data/clean_data.csv
