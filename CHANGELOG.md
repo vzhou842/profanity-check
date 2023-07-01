@@ -1,5 +1,9 @@
 # Changelog
 
+## Next Version
+
+* Compressed training data to reduce library's size for faster downloads
+
 ## Version 1.2.2
 
 * scikit-learn to 1.2.2
