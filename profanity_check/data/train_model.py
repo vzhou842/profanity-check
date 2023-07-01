@@ -18,7 +18,7 @@ def sha256sum(filename) -> str:
 
     Helper method from StackOverflow: https://stackoverflow.com/a/44873382
     """
-    with open(filename, 'rb', buffering=0) as f:
+    with open(filename, "rb", buffering=0) as f:
         return hashlib.file_digest(f, "sha512").hexdigest()
 
 
