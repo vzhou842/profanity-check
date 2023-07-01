@@ -3,11 +3,11 @@ import hashlib
 import subprocess
 from pathlib import Path
 
-# import pandas as pd
-# from joblib import dump
-# from sklearn.feature_extraction.text import TfidfVectorizer
-# from sklearn.svm import LinearSVC
-# from sklearn.calibration import CalibratedClassifierCV
+import pandas as pd
+from joblib import dump
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.svm import LinearSVC
+from sklearn.calibration import CalibratedClassifierCV
 
 DATA_FILE_NAME = "clean_data.csv"
 HASH_OF_DATA_FILE = f"{DATA_FILE_NAME}.sha512"
@@ -20,20 +20,6 @@ def sha256sum(filename) -> str:
     """
     with open(filename, 'rb', buffering=0) as f:
         return hashlib.file_digest(f, "sha512").hexdigest()
-
-# data = pd.read_csv(DATA_FILE)
-# texts = data["text"].astype(str)
-# y = data["is_offensive"]
-#
-# vectorizer = TfidfVectorizer(stop_words="english", min_df=0.0001)
-# X = vectorizer.fit_transform(texts)
-#
-# model = LinearSVC(class_weight="balanced", dual=False, tol=1e-2, max_iter=int(1e5))
-# calibrated_classifier_cv = CalibratedClassifierCV(estimator=model)
-# calibrated_classifier_cv.fit(X, y)
-#
-# dump(vectorizer, "vectorizer.joblib")
-# dump(calibrated_classifier_cv, "model.joblib")
 
 
 if __name__ == "__main__":
@@ -60,3 +46,17 @@ if __name__ == "__main__":
             f"Hash of {DATA_FILE_NAME} does not match stored hash. "
             "Please download the data again."
         )
+
+    data = pd.read_csv(DATA_FILE_NAME)
+    texts = data["text"].astype(str)
+    y = data["is_offensive"]
+
+    vectorizer = TfidfVectorizer(stop_words="english", min_df=0.0001)
+    X = vectorizer.fit_transform(texts)
+
+    model = LinearSVC(class_weight="balanced", dual=False, tol=1e-2, max_iter=int(1e5))
+    calibrated_classifier_cv = CalibratedClassifierCV(estimator=model)
+    calibrated_classifier_cv.fit(X, y)
+
+    dump(vectorizer, "vectorizer.joblib")
+    dump(calibrated_classifier_cv, "model.joblib")
