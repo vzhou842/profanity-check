@@ -13,9 +13,9 @@
 INPUT_FILE=clean_data.csv.7z
 OUTPUT_FILE=clean_data.csv
 
+echo ""
 echo "Decompress clean_data.csv"
-
-ls -l "${OUTPUT_FILE}"
+echo ""
 
 #
 # Check that 7z is available, source: https://stackoverflow.com/a/677212
