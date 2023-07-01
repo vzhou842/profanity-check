@@ -23,8 +23,12 @@ ls -l "${OUTPUT_FILE}"
 command -v 7z >/dev/null 2>&1 || { echo >&2 "I require 7z but it's not installed.  Aborting."; exit 1; }
 
 #
-# TODO: Check if the file exists before decompressing
+# Check if the file exists before decompressing
 #
+if [ ! -e "${INPUT_FILE}" ]; then
+    echo "${INPUT_FILE} does not exist"
+    exit 2
+fi
 
 echo
 echo "Listing compressed file contents:"
