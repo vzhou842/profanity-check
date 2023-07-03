@@ -20,7 +20,7 @@ echo ""
 #
 # Check that 7z is available, source: https://stackoverflow.com/a/677212
 #
-command -v 7z >/dev/null 2>&1 || { echo >&2 "I require 7z but it's not installed.  Aborting."; exit 1; }
+command -v 7z >/dev/null 2>&1 || { echo >&2 "I require 7z but it's not installed. Aborting."; exit 1; }
 
 #
 # Check if the file exists before decompressing
