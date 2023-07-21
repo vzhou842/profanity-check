@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 1.3.0
+
+* scikit-learn to 1.3.0
+* pandas to 2.0.3
+* numpy to 1.25.1
+
 ## Next Version
 
 * Compressed training data to reduce library's size for faster downloads
