@@ -1,5 +1,12 @@
 # Changelog
 
+## Version 1.3.1
+
+* scikit-learn to 1.3.1
+* pandas to 2.1.1
+* numpy to 1.26.0
+* scipy to 1.11.3
+
 ## Version 1.3.0
 
 * scikit-learn to 1.3.0
