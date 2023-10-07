@@ -30,19 +30,24 @@ if __name__ == "__main__":
     data_file = Path(__file__).parent / DATA_FILE_NAME
     if not data_file.exists():
         print(f"Could not find {DATA_FILE_NAME}, will try to extract.")
-        subprocess.run(["./decompress_data"])
+        decompression = subprocess.run(["./decompress_data"])
 
-        hash_sha512 = sha256sum(data_file)
+        # Check if decompression without errors
+        if decompression.returncode != 0:
+            print("Error in decompressing the data.")
+            exit(1)
+
+        hash_sha256 = sha256sum(data_file)
         hash_file = Path(__file__).parent / HASH_OF_DATA_FILE
         stored_hash = hash_file.read_text().strip().split(" ")[0]
         print(stored_hash)
 
         print()
-        print(f"SHA512 hash of {DATA_FILE_NAME}: {hash_sha512}")
+        print(f"SHA256 hash of {DATA_FILE_NAME}: {hash_sha256}")
         print(f"Stored hash to check against: {stored_hash}")
         print()
 
-        assert hash_sha512 == stored_hash, (
+        assert hash_sha256 == stored_hash, (
             f"Hash of {DATA_FILE_NAME} does not match stored hash. "
             "Please download the data again."
         )
