@@ -1,6 +1,7 @@
 """Train Model from data"""
 import hashlib
 import subprocess
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -18,8 +19,8 @@ def sha256sum(filename) -> str:
 
     Helper method from StackOverflow: https://stackoverflow.com/a/44873382
     """
-    with open(filename, "rb", buffering=0) as f:
-        return hashlib.file_digest(f, "sha512").hexdigest()
+    with open(filename, "rb", buffering=0) as file_to_check:
+        return hashlib.file_digest(file_to_check, "sha512").hexdigest()
 
 
 if __name__ == "__main__":
@@ -30,12 +31,21 @@ if __name__ == "__main__":
     data_file = Path(__file__).parent / DATA_FILE_NAME
     if not data_file.exists():
         print(f"Could not find {DATA_FILE_NAME}, will try to extract.")
-        decompression = subprocess.run(["./decompress_data"])
+        #
+        # Note: check=False as per pylint's recommendation, in detail
+        # > The ``check`` keyword is set to False by default. It means the process
+        # > launched by ``subprocess.run`` can exit with a non-zero exit code and
+        # > fail silently. It's better to set it explicitly to make clear what the
+        # > error-handling behavior is.
+        #
+        # A check raising an exception should be added at some point
+        #
+        decompression = subprocess.run(["./decompress_data"], check=False)
 
         # Check if decompression without errors
         if decompression.returncode != 0:
             print("Error in decompressing the data.")
-            exit(1)
+            sys.exit(1)
 
         hash_sha256 = sha256sum(data_file)
         hash_file = Path(__file__).parent / HASH_OF_DATA_FILE
