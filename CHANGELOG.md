@@ -1,5 +1,14 @@
 # Changelog
 
+## Version 1.3.2
+
+* Teaching Python Note on README
+* scikit-learn to 1.3.2
+* pandas to 2.1.3
+* numpy to 1.26.2 
+* joblib to 1.3.2
+
+
 ## Version 1.3.1
 
 * scikit-learn to 1.3.1
