@@ -1,5 +1,13 @@
 # Changelog
 
+## Version 1.8.0 - 2026-01-13
+
+- Updated scikit-learn to 1.8.0
+- Updated joblib to 1.5.3
+- Python >= 3.11 required (scikit-learn 1.8 requirement)
+- Retrained models with scikit-learn 1.8.0
+- Tested with Python 3.14
+
 ## Version 1.7.2
 
 - scikit-learn to 1.7.2

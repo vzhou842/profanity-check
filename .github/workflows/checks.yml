@@ -8,8 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # For quotes on 3.10: https://github.com/actions/setup-python/issues/160
-        python_version: ["3.10", 3.11, 3.12, 3.13]
+        python_version: [3.11, 3.12, 3.13, 3.14]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -23,8 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # For quotes on 3.10: https://github.com/actions/setup-python/issues/160
-        python_version: ["3.10", 3.11, 3.12, 3.13]
+        python_version: [3.11, 3.12, 3.13, 3.14]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

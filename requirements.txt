@@ -1,9 +1,6 @@
-joblib==1.5.1
-numpy==2.3.3; python_version > '3.10'
-numpy==2.1.1; python_version == '3.10'
+joblib==1.5.3
+numpy==2.3.3
 # Used for the training script:
-pandas==2.3.2; python_version > '3.10'
-pandas==2.2.2; python_version == '3.10'
-scikit-learn==1.7.2
-scipy==1.16.1; python_version > '3.10'
-scipy==1.15.3; python_version == '3.10'
+pandas==2.3.2
+scikit-learn==1.8.0
+scipy==1.16.1
