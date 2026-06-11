@@ -1,0 +1,41 @@
+#!/bin/env bash
+#
+# 7z needs to be installed able to be used from the command line in order to
+# compress files:
+#
+# sudo apt install p7zip-full
+#
+# Compressed file created with:
+#
+# 7z a clean_data.csv.7z clean_data.csv
+#
+
+INPUT_FILE=clean_data.csv.7z
+OUTPUT_FILE=clean_data.csv
+
+echo ""
+echo "Decompress clean_data.csv"
+echo ""
+
+#
+# Check that 7z is available, source: https://stackoverflow.com/a/677212
+#
+command -v 7z >/dev/null 2>&1 || { echo >&2 "I require 7z but it's not installed. Aborting."; exit 1; }
+
+#
+# Check if the file exists before decompressing
+#
+if [ ! -e "${INPUT_FILE}" ]; then
+    echo "${INPUT_FILE} does not exist"
+    exit 2
+fi
+
+echo
+echo "Listing compressed file contents:"
+echo
+7z l "${INPUT_FILE}"
+
+echo
+echo "Extract ${OUTPUT_FILE} from ${INPUT_FILE}:"
+echo
+7z x "${INPUT_FILE}" "${OUTPUT_FILE}"

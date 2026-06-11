@@ -1,25 +1,39 @@
+"""Setup"""
+
+from pathlib import Path
 import setuptools
 
-with open("README.md", "r") as fh:
-  long_description = fh.read()
+long_description = Path("README.md").read_text(encoding="utf8")
 
 setuptools.setup(
-  name="profanity-check",
-  version="1.0.3",
-  author="Victor Zhou",
-  author_email="vzhou842@gmail.com",
-  description="A fast, robust library to check for offensive language in strings.",
-  long_description=long_description,
-  long_description_content_type="text/markdown",
-  url="https://github.com/vzhou842/profanity-check",
-  packages=setuptools.find_packages(),
-  install_requires=['joblib>=0.14.1', 'scikit-learn>=0.20.2'],
-  package_data={ 'profanity_check': ['data/model.joblib', 'data/vectorizer.joblib'] },
-  classifiers=[
-    "Development Status :: 5 - Production/Stable",
-    "Natural Language :: English",
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-  ],
+    name="alt-profanity-check",
+    version="1.9.0",
+    author="Victor Zhou (original author), Menelaos Kotoglou, Dimitrios Mistriotis",
+    author_email="dimitrios@mistriotis.com",
+    description=(
+        "A fast, robust library to check for offensive language in strings. "
+        'Dropdown replacement of "profanity-check".'
+    ),
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/dimitrismistriotis/alt-profanity-check",
+    packages=setuptools.find_packages(),
+    install_requires=[
+        "scikit-learn==1.9.0",
+        "joblib==1.5.3",
+    ],
+    python_requires=">=3.11",
+    package_data={"profanity_check": ["data/model.joblib", "data/vectorizer.joblib"]},
+    classifiers=[
+        "Development Status :: 5 - Production/Stable",
+        "Natural Language :: English",
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    entry_points={
+        "console_scripts": [
+            "profanity_check=profanity_check.command_line:main",
+        ],
+    },
 )

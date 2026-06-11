@@ -10,7 +10,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+dist/*.tgz
 downloads/
 eggs/
 .eggs/
@@ -53,6 +53,8 @@ coverage.xml
 
 # Django stuff:
 *.log
+.static_storage/
+.media/
 local_settings.py
 db.sqlite3
 
@@ -104,3 +106,17 @@ venv.bak/
 .mypy_cache/
 
 .DS_Store
+#### joe made this: http://goel.io/joe
+
+#
+# Used in some off the shelf templates:
+#
+# dist/
+
+# .idea
+.idea/
+
+#
+# Ignore clean_data.csv from data now that we store it in compressed form
+#
+profanity_check/data/clean_data.csv
